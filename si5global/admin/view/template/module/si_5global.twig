@@ -1,0 +1,48 @@
+{{ header }}{{ column_left }}
+<div id="content">
+  <div class="page-header">
+    <div class="container-fluid">
+      <div class="float-end">
+        <button type="submit" form="form-si5global" data-bs-toggle="tooltip" title="{{ button_save }}" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i></button>
+        <a href="{{ back }}" data-bs-toggle="tooltip" title="{{ button_back }}" class="btn btn-light"><i class="fa-solid fa-reply"></i></a>
+      </div>
+      <h1>{{ heading_title }}</h1>
+      <ol class="breadcrumb">
+        {% for breadcrumb in breadcrumbs %}
+          <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header"><i class="fa-solid fa-pencil"></i> {{ text_edit }}</div>
+      <div class="card-body">
+        <p>{{ text_intro }}</p>
+        <form id="form-si5global" action="{{ save }}" method="post" data-oc-toggle="ajax">
+          <div class="row mb-3">
+            <label for="input-token" class="col-sm-2 col-form-label">{{ entry_token }}</label>
+            <div class="col-sm-10">
+              <input type="password" name="module_si_5global_token" value="" id="input-token" class="form-control" autocomplete="new-password"/>
+              {% if tem_token %}<div class="form-text">{{ text_token_saved }}</div>{% endif %}
+              <div class="form-check mt-2">
+                <input type="checkbox" name="module_si_5global_remover" value="1" id="input-remover" class="form-check-input"/>
+                <label for="input-remover" class="form-check-label">{{ text_remove }}</label>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="input-status" class="col-sm-2 col-form-label">{{ entry_status }}</label>
+            <div class="col-sm-10">
+              <div class="form-check form-switch form-switch-lg">
+                <input type="hidden" name="module_si_5global_status" value="0"/>
+                <input type="checkbox" name="module_si_5global_status" value="1" id="input-status" class="form-check-input"{% if module_si_5global_status %} checked{% endif %}/>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{{ footer }}
