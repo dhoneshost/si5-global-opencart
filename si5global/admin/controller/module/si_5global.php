@@ -13,7 +13,7 @@ require_once DIR_EXTENSION . 'si5global/system/library/si5global_client.php';
 
 class Si5global extends \Opencart\System\Engine\Controller
 {
-    const VERSAO = '1.0.0';
+    const VERSAO = '1.0.1';
     const CAMPOS = ['nome', 'marca', 'peso', 'imagem', 'ncm', 'cest'];
 
     private function sep(): string

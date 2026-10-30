@@ -33,7 +33,7 @@ A extensão consulta `https://global.si5.com.br/api/produtos/{código}` enviando
 1. Baixe o `si5global.ocmod.zip` em [Releases](../../releases).
 2. Em *Extensões › Instalador*, envie o arquivo e clique em instalar.
 3. Em *Extensões › Extensões › Módulos*, instale o **SI5 Global** e clique em editar.
-4. Crie uma conta e um token em global.si5.com.br (*Minha conta*); o plano gratuito permite 100 consultas por dia. Cole o token, ligue a situação e salve.
+4. Crie uma conta e um token em global.si5.com.br (*Minha conta*); o plano gratuito tem uma cota diária de consultas (veja os limites de cada plano em global.si5.com.br). Cole o token, ligue a situação e salve.
 
 Requisitos: OpenCart 4, PHP 8.0+ com cURL e GD (com suporte a WebP).
 
